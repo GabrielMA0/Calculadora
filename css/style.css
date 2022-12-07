@@ -2,9 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(/img/e067f85e867c15608110c48259536632.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient( 125deg,#e0eff1,#7db4b5 );
     font-family: sans-serif;
     overflow: hidden;
 }
@@ -26,7 +24,7 @@ body{
     text-align: center;
     color: white;
 }
-.fundo-resposta{
+#fundo-resposta{
     text-align: right;
     color: black;
     background-color: white;
@@ -35,6 +33,8 @@ body{
     word-wrap: break-word;
     margin: 0;
     font-size: 25px;
+    border:none;
+    outline: none;
 }
 .fundo-conteudo{
     display: flex;
@@ -78,10 +78,10 @@ body{
 }
 .fundo-conteudo-operadores button{
     background-color: orange;
-    color: black;
+    color: white;
 }
 .btn-resultado{
-    height: 1.7rem;
+    height: 26px;
 }
 .material-symbols-outlined{
     font-size: 17px;
