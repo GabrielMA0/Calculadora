@@ -2,8 +2,10 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient( 125deg,#e0eff1,#7db4b5 );
-    font-family: sans-serif;
+    background-image: url(/img/bg_79.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
     overflow: hidden;
 }
 .container{
@@ -40,13 +42,13 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    width: 186px;
 }
 .fundo-conteudo-number{
     display: flex;
     flex-wrap: wrap;
-    width: 126px;
-    height: 180px;  
+    width: 100%;
+    height: 180px;
     padding-top: 20px;
 
 }
