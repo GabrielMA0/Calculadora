@@ -1,17 +1,28 @@
 let resposta = document.getElementById('fundo-resposta');
 
-function insert(num){
-    resposta.innerHTML += num;
+function inset(num){
+    let conteudo = resposta.innerHTML;
+    let resultado = conteudo.replace("0", "");
+    resposta.innerHTML = resultado + num;
+}
+function operator(op){
+    resposta.innerHTML += op;
 }
 function clean(){
-    resposta.innerHTML = null;
+    resposta.innerHTML = 0;
 }
 function back(){
-    var resultado = document.querySelector('#fundo-resposta').innerHTML;
+    let resultado = document.querySelector('#fundo-resposta').innerHTML;
     resposta.innerHTML = resultado.substring(0, resultado.length -1);
+
+    // COLOCANDO O NÚMERO 0 APÓS APAGAR TUDO!
+
+    if(resultado.length === 1){
+        resposta.innerHTML = 0;
+    }
 }
 function calcular(){
-    var resultado = document.querySelector('#fundo-resposta').innerHTML;
+    let resultado = document.querySelector('#fundo-resposta').innerHTML;
     if(resultado)
             {
                 resposta.innerHTML = eval(resultado);
@@ -99,7 +110,7 @@ document.addEventListener("keydown", function(e){
     }
 })
 document.addEventListener("keypress", function(e){
-    if (e.key === 'c'){
+    if (e.key === 'c' || e.key === "C"){
         let keyc = document.querySelector('.btn-c');
         keyc.click();
     }
@@ -117,7 +128,7 @@ document.addEventListener("keypress", function(e){
     }
 })
 document.addEventListener("keypress", function(e){
-    if (e.key === '*'){
+    if (e.key === '*' || e.key === 'x' || e.key === 'X'){
         let keyvezes = document.querySelector('.btn-vezes');
         keyvezes.click();
     }
