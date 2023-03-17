@@ -1,9 +1,16 @@
 let resposta = document.getElementById('fundo-resposta');
 
 function inset(num){
-    let conteudo = resposta.innerHTML;
+    let conteudo = resposta.innerText;
     let resultado = conteudo.replace("0", "");
-    resposta.innerHTML = resultado + num;
+    
+ console.log(conteudo.length)
+    if(conteudo.length === 1){
+        resposta.innerHTML = resultado + num;    
+    } else{
+        resposta.innerHTML += num;
+    }
+
 }
 function operator(op){
     resposta.innerHTML += op;
